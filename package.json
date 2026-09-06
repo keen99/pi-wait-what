@@ -39,5 +39,10 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/keen99/pi-wait-what"
+	},
+	"peerDependenciesMeta": {
+		"@earendil-works/pi-coding-agent": {
+			"optional": true
+		}
 	}
 }
