@@ -1,8 +1,17 @@
 import type { ExtensionAPI, ExtensionCommandContext } from "@earendil-works/pi-coding-agent";
+import { writeFileSync } from "node:fs";
+import { homedir } from "node:os";
+import { join } from "node:path";
 
 const WAIT_WHAT_COMMAND = "wait-what";
 
 export default function waitWhat(pi: ExtensionAPI) {
+	if (process.env.WAIT_WHAT_DEBUG === "1") {
+		try {
+			const agentDir = process.env.PI_CODING_AGENT_DIR || join(homedir(), ".pi", "agent");
+			writeFileSync(join(agentDir, "wait-what-loaded.json"), JSON.stringify({ loaded: true, command: WAIT_WHAT_COMMAND }) + "\n");
+		} catch { /* debug marker best-effort */ }
+	}
 	pi.registerCommand(WAIT_WHAT_COMMAND, {
 		description: "Pause and ask the agent to explain what it is doing",
 		handler: async (args, ctx) => {
