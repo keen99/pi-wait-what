@@ -1,5 +1,8 @@
 # 🤔 pi-wait-what — Pause and Ask What the Agent Is Doing
 
+![release-watch](https://github.com/keen99/pi-wait-what/actions/workflows/release-watch.yml/badge.svg)
+[![pi tested](https://img.shields.io/github/v/release/keen99/pi-wait-what?label=pi%20tested%200.75.0%20%E2%86%92)](https://github.com/keen99/pi-wait-what/releases)
+
 [![Pi extension](https://img.shields.io/badge/Pi-extension-blue)](https://pi.dev) [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 > [!IMPORTANT]
